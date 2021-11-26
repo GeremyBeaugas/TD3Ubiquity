@@ -7,7 +7,7 @@ namespace controllers;
   */
 class MainController extends \controllers\ControllerBase{
 
-    #[Route('_default',name:'home')]
+    #[Route('/_default',name:'home')]
 	public function index(){
 		$this->loadDefaultView();
 	}
