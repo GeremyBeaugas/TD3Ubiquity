@@ -14,4 +14,17 @@
 </head>
 <body>
 {% block head %}
+<div class="ui basic inverted segment">
+	<div class="ui container">
+		<div class="ui inverted secondary menu">
+			<a href="{{path('home')}}" class="item">Home</a>
+			<div class="item"><div id="_userInfo">
+				<a href="{{path('login')}}" data-target="#page-container" class="ui inverted button ajax">
+					<i class="icon sign in"></i> Connexion
+				</a>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}

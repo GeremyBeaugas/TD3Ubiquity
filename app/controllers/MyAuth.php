@@ -7,13 +7,19 @@ use Ubiquity\attributes\items\router\Route;
 #[Route(path: "/login",inherited: true,automated: true)]
 class MyAuth extends \Ubiquity\controllers\auth\AuthController{
 
+    #[Route(name:'login')]
+    public function index()
+    {
+        return parent::index();
+    }
+
 	protected function onConnect($connected) {
 		$urlParts=$this->getOriginalURL();
 		USession::set($this->_getUserSessionKey(), $connected);
 		if(isset($urlParts)){
 			$this->_forward(implode("/",$urlParts));
 		}else{
-
+            $this->loadView('MainController/home');
 		}
 	}
 
@@ -21,6 +27,7 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
 		if(URequest::isPost()){
 			$email=URequest::post($this->_getLoginInputName());
 			$password=URequest::post($this->_getPasswordInputName());
+
 			//TODO
 			//Loading from the database the user corresponding to the parameters
 			//Checking user creditentials
@@ -28,6 +35,26 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
 		}
 		return;
 	}
+
+    public function _displayInfoAsString() {
+        return true;
+    }
+
+    protected function finalizeAuth() {
+        if(!URequest::isAjax()){
+            $this->loadView('@activeTheme/main/vFooter.html');
+        }
+    }
+
+    protected function initializeAuth() {
+        if(!URequest::isAjax()){
+            $this->loadView('@activeTheme/main/vHeader.html');
+        }
+    }
+
+    public function _getBodySelector() {
+        return '#page-container';
+    }
 	
 	/**
 	 * {@inheritDoc}
