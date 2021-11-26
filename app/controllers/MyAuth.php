@@ -10,7 +10,7 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
     #[Route(name:'login')]
     public function index()
     {
-        return parent::index();
+        $this->loadDefaultView();
     }
 
 	protected function onConnect($connected) {
