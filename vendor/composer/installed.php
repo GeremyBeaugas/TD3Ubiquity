@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.9',
-        'version' => '1.0.9.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'framework',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'a562755cba0adfbcfdc0e4b25c1d1db6e6fe16f6',
         'name' => 'phpmv/ubiquity-project',
         'dev' => true,
     ),
@@ -92,12 +92,12 @@
             'dev_requirement' => true,
         ),
         'phpmv/ubiquity-project' => array(
-            'pretty_version' => '1.0.9',
-            'version' => '1.0.9.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'framework',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'a562755cba0adfbcfdc0e4b25c1d1db6e6fe16f6',
             'dev_requirement' => false,
         ),
         'phpmv/ubiquity-webtools' => array(
