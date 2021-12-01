@@ -20,8 +20,9 @@
                         <i class="users icon"></i>Utilisateurs
                     </div>
                     <div class="ui blue segment">
-                        <a href="{{path('new.user')}}" class="ui inverted olive button"><i class="add icon"></i>Ajouter un utilisateur</a>
+                        <a href="{{path('new.user')}}" class="ui inverted olive button" data-target="#new-user"><i class="add icon"></i>Ajouter un utilisateur</a>
                     </div>
+                    <div id="new-user"></div>
                     <div class="ui segment">
                         <a class="ui inverted olive button"><i class="add icon"></i>Ajouter des utilisateurs</a>
                     </div>
@@ -67,7 +68,5 @@
         {% block _after %}
 {% endblock %}
 {% block script %}
-{% if hasScript %}
 {{script_foot | raw}}
-{% endif %}
 {% endblock %}
