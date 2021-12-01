@@ -1,5 +1,7 @@
 <?php
 namespace controllers;
+ use services\dao\OrgaRepository;
+ use Ubiquity\attributes\items\di\Autowired;
  use Ubiquity\attributes\items\router\Route;
 
  /**
@@ -11,4 +13,10 @@ class MainController extends \controllers\ControllerBase{
 	public function index(){
 		$this->loadDefaultView();
 	}
+
+    #[Autowired]
+    private OrgaRepository $repo;
+    public function setRepo(OrgaRepository $repo): void {
+        $this->repo = $repo;
+    }
 }
