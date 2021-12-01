@@ -19,6 +19,7 @@
 		<div class="ui inverted secondary menu">
 			<a href="{{url('home')}}" class="item">Home</a>
 			<div class="item"><div id="_userInfo">
+				<div class="item">{{ _userInfo|raw }}</div>
 				<a href="{{path('login')}}" data-target="#page-container" class="ui inverted olive button ajax">
 					<i class="icon sign in"></i> Connexion
 				</a>

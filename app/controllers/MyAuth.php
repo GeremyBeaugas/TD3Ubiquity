@@ -7,7 +7,7 @@ use Ubiquity\attributes\items\router\Route;
 #[Route(path: "/login",inherited: true,automated: true)]
 class MyAuth extends \Ubiquity\controllers\auth\AuthController{
 
-    #[Route('/login',name:'login')]
+    #[Route(name:'login')]
     public function index()
     {
         $this->loadDefaultView();
