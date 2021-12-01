@@ -20,7 +20,7 @@
                         <i class="users icon"></i>Utilisateurs
                     </div>
                     <div class="ui blue segment">
-                        <a class="ui inverted olive button"><i class="add icon"></i>Ajouter un utilisateur</a>
+                        <a href="{{path('new.user')}}" class="ui inverted olive button"><i class="add icon"></i>Ajouter un utilisateur</a>
                     </div>
                     <div class="ui segment">
                         <a class="ui inverted olive button"><i class="add icon"></i>Ajouter des utilisateurs</a>
@@ -64,13 +64,7 @@
                 </div>
             </div>
         </div>
-
         {% block _after %}
-    </div><h1 class="ui center aligned icon header inverted disabled">
-    <i class="huge circular sticky users icon"></i>
-    Groups
-</h1>
-</div>
 {% endblock %}
 {% block script %}
 {% if hasScript %}
