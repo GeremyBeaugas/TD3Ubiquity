@@ -42,5 +42,6 @@ return array(
 	"part2"=>[
 			"maintenance",
 			"composer"
-			]
+			],
+	"activeDb"=>"default"
 	);
