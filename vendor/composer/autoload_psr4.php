@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'phpseclib3\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Ubiquity\\tests\\unit\\' => array($vendorDir . '/phpmv/ubiquity-codeception/src/unit'),
     'Ubiquity\\' => array($vendorDir . '/phpmv/ubiquity/src/Ubiquity', $vendorDir . '/phpmv/ubiquity-attributes/src/Ubiquity', $vendorDir . '/phpmv/ubiquity-commands/src/Ubiquity', $vendorDir . '/phpmv/ubiquity-debug/src/Ubiquity', $vendorDir . '/phpmv/ubiquity-dev/src/Ubiquity', $vendorDir . '/phpmv/ubiquity-devtools/src', $vendorDir . '/phpmv/ubiquity-webtools/src/Ubiquity'),
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
@@ -13,6 +14,13 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
+    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src', $vendorDir . '/psr/http-factory/src'),
+    'Psr\\Http\\Client\\' => array($vendorDir . '/psr/http-client/src'),
+    'ParagonIE\\ConstantTime\\' => array($vendorDir . '/paragonie/constant_time_encoding/src'),
+    'PHPMV\\' => array($vendorDir . '/phpmv/php-ssh-proxmox/src/PHPMV'),
+    'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
+    'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
+    'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'Codeception\\Module\\' => array($vendorDir . '/phpmv/ubiquity-codeception/src/functional'),
     'Codeception\\Lib\\Connector\\' => array($vendorDir . '/phpmv/ubiquity-codeception/src/functional'),
     'Ajax\\' => array($vendorDir . '/phpmv/php-mv-ui/Ajax'),

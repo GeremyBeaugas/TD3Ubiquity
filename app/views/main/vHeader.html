@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% block header %}
+	<base href="{{config[siteUrl]}}">
+	<meta charset="UTF-8">
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<title>TD3Ubiquity</title>
+{% endblock %}
+{% block css %}
+	{{ css('https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css') }}
+	{{css('css/style.css')}}
+{% endblock %}
+</head>
+<body>
+{% block head %}
+<div class="ui basic inverted segment">
+	<div class="ui container">
+		<div class="ui inverted secondary menu">
+			<a href="{{url('home')}}" class="item">Home</a>
+			<div class="item"><div id="_userInfo">
+				<a href="{{path('login')}}" data-target="#page-container" class="ui inverted olive button ajax">
+					<i class="icon sign in"></i> Connexion
+				</a>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
