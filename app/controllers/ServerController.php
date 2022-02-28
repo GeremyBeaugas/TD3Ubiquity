@@ -1,9 +1,11 @@
 <?php
 namespace controllers;
+use Ajax\php\ubiquity\JsUtils;
 use PHPMV\ProxmoxApi;
 use Ubiquity\attributes\items\router\Route;
  /**
   * Controller ServerController
+  * @property JsUtils jquery
   */
  #Route[('server')];
 class ServerController extends \controllers\ControllerBase{
