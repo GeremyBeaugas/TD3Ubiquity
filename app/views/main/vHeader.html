@@ -8,7 +8,7 @@
 	<title>TD3Ubiquity</title>
 {% endblock %}
 {% block css %}
-	{{ css('https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css') }}
+	{{css('https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css') }}
 	{{css('css/style.css')}}
 {% endblock %}
 </head>
@@ -18,11 +18,11 @@
 	<div class="ui container">
 		<div class="ui inverted secondary menu">
 			<a href="{{url('home')}}" class="item">Home</a>
-			<div class="item"><div id="_userInfo">
-				<a href="{{path('login')}}" data-target="#page-container" class="ui inverted olive button ajax">
+			<div class="item" id="_userInfo">
+				<div id="user-info" class="item">{{ _userInfo|raw }}</div>
+				<a href="{{path('login')}}" class="ui inverted olive button ajax">
 					<i class="icon sign in"></i> Connexion
 				</a>
-			</div>
 			</div>
 		</div>
 	</div>
